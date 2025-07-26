@@ -12,3 +12,6 @@ build/
 
 # CocoaPods
 Pods/
+
+# Unneeded folders
+Documentation/
