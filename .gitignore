@@ -1,4 +1,4 @@
-# macOS
+# macOS system files
 .DS_Store
 
 # Xcode
@@ -7,11 +7,24 @@
 *.xcuserstate
 DerivedData/
 build/
-.idea/
 *.swiftsourceinfo
+
+# Swift Package Manager
+.build/
+Packages/
+.swiftpm/
 
 # CocoaPods
 Pods/
+Podfile.lock
 
-# Unneeded folders
+# Carthage
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/screenshots
+fastlane/test_output
+
+# Junk or manual folders
 Documentation/
