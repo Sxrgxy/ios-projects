@@ -1,0 +1,39 @@
+# macOS system files
+.DS_Store
+
+# Xcode
+*.xcworkspace
+*.xcuserdata
+*.xcuserstate
+DerivedData/
+build/
+*.swiftsourceinfo
+
+# Swift Package Manager
+.build/
+Packages/
+.swiftpm/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/screenshots
+fastlane/test_output
+
+# Junk or manual folders
+Documentation/
+
+# Xcode user data
+**/xcuserdata/
+**/*.xcuserstate
+
+# Swift Package Manager
+.build/
+Packages/
+.swiftpm/
