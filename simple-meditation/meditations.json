@@ -1,0 +1,11 @@
+{
+    "meditations": [
+        {"id": "1", "title": "Breath Basics", "audioFileName": "Breath Basics", "imageName": "wind"},
+        {"id": "2", "title": "Body Scan", "audioFileName": "Body Scan", "imageName": "dot.radiowaves.left.and.right"},
+        {"id": "3", "title": "Noticing Thoughts", "audioFileName": "Noticing Thoughts", "imageName": "cloud"},
+        {"id": "4", "title": "Name Your Emotion", "audioFileName": "Name Your Emotion", "imageName": "sparkles"},
+        {"id": "5", "title": "Loving-Kindness", "audioFileName": "Loving-Kindness", "imageName": "sun.max"},
+        {"id": "6", "title": "Open Awareness", "audioFileName": "Open Awareness", "imageName": "water.waves"},
+        {"id": "7", "title": "Quiet Time", "audioFileName": "Quiet Time", "imageName": "waveform"}
+    ]
+}
