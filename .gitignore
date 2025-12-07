@@ -29,11 +29,16 @@ fastlane/test_output
 # Junk or manual folders
 Documentation/
 
-# Xcode user data
-**/xcuserdata/
-**/*.xcuserstate
-
 # Swift Package Manager
 .build/
 Packages/
 .swiftpm/
+
+# Xcode
+*.xcuserdata
+*.mp3
+**/*.xcuserstate
+.DS_Store
+*.xcworkspace
+DerivedData/
+Pods/
