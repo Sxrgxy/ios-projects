@@ -1,6 +1,6 @@
 # Privacy Policy for Simple Meditation
 
-**Last updated:** December 7, 2024
+**Last updated:** May 10, 2026
 
 ## Overview
 
