@@ -39,4 +39,4 @@ For questions about this privacy policy, contact: vologzhaninsergey23@gmail.com
 ---
 
 **Simple Meditation**  
-https://github.com/Sxrgxy/ios-projects
+https://github.com/Sxrgxy/ios-projects/blob/main/simple-meditation/privacy-policy.md
