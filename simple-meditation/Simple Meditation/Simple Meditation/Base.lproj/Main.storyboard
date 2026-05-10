@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_Meditation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NyS-Dh-Qx7">
+                                <rect key="frame" x="30" y="178" width="333" height="606"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96078431372549022" green="0.94901960784313721" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.94901960784313721" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="NyS-Dh-Qx7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="G5d-uM-t5c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NyS-Dh-Qx7" secondAttribute="bottom" id="SB2-pZ-Fi8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NyS-Dh-Qx7" secondAttribute="trailing" constant="30" id="VyY-et-m8Y"/>
+                            <constraint firstItem="NyS-Dh-Qx7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="f4o-dD-tny"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="NyS-Dh-Qx7" id="NvC-kb-4O3"/>
+                        <segue destination="abg-oS-PXa" kind="presentation" identifier="ShowPlayer" modalPresentationStyle="fullScreen" id="jm6-s0-wtP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-747.32824427480909" y="-625.35211267605632"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="go4-xm-j7q">
+            <objects>
+                <viewController id="abg-oS-PXa" customClass="PlayerViewController" customModule="Simple_Meditation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LDG-Yc-CVA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="titleLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qf-eV-p6p">
+                                <rect key="frame" x="40" y="175.33333333333334" width="313" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYt-ZI-PAa">
+                                <rect key="frame" x="20.000000000000004" y="75" width="44.333333333333343" height="40.333333333333343"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system" title="">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="abg-oS-PXa" eventType="touchUpInside" id="ydG-Uu-ow3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrA-en-ZSO">
+                                <rect key="frame" x="40" y="628" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="nLy-l1-EyU"/>
+                                    <constraint firstAttribute="height" constant="60" id="t5R-Wv-cIG"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.trianglehead.counterclockwise" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restartButtonTapped:" destination="abg-oS-PXa" eventType="touchUpInside" id="RWC-er-aLW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYQ-AJ-k47">
+                                <rect key="frame" x="156.66666666666666" y="678" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="LUC-ev-YIy"/>
+                                    <constraint firstAttribute="width" constant="80" id="w0E-nC-LFR"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pause.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="60" weight="thin"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pauseButtonTapped:" destination="abg-oS-PXa" eventType="touchUpInside" id="qrZ-Sv-NwJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0l-gN-Sp6">
+                                <rect key="frame" x="156.66666666666666" y="678" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9p3-UZ-Ibp"/>
+                                    <constraint firstAttribute="width" constant="80" id="gZy-WB-kdK"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" buttonSize="large">
+                                    <imageReference key="image" image="play.circle" catalog="system" variableValue="1"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="60" weight="thin"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="abg-oS-PXa" eventType="touchUpInside" id="jgG-ab-wke"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wWp-JC-rde">
+                                <rect key="frame" x="40" y="594" width="313" height="34"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="durationLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQe-vz-exy">
+                                <rect key="frame" x="248" y="573.66666666666663" width="105" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5qm-63-Mrv"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.94901960784313721" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d0l-gN-Sp6" firstAttribute="centerX" secondItem="LDG-Yc-CVA" secondAttribute="centerX" id="23s-TL-J9U"/>
+                            <constraint firstItem="5qm-63-Mrv" firstAttribute="trailing" secondItem="wWp-JC-rde" secondAttribute="trailing" constant="40" id="36c-kk-ft5"/>
+                            <constraint firstItem="kYQ-AJ-k47" firstAttribute="top" secondItem="wWp-JC-rde" secondAttribute="bottom" constant="50" id="3aS-9Q-N3w" userLabel="Pause Button.top = Slider Bar.bottom + 40"/>
+                            <constraint firstItem="iYt-ZI-PAa" firstAttribute="top" secondItem="5qm-63-Mrv" secondAttribute="top" constant="16" id="9Yt-Ul-1qj"/>
+                            <constraint firstItem="NrA-en-ZSO" firstAttribute="top" secondItem="wWp-JC-rde" secondAttribute="bottom" id="HXB-Pg-CeS"/>
+                            <constraint firstItem="2Qf-eV-p6p" firstAttribute="centerX" secondItem="5qm-63-Mrv" secondAttribute="centerX" id="KgC-9z-dyj"/>
+                            <constraint firstItem="5qm-63-Mrv" firstAttribute="trailing" secondItem="gQe-vz-exy" secondAttribute="trailing" constant="40" id="OrA-Wj-POb"/>
+                            <constraint firstItem="wWp-JC-rde" firstAttribute="top" secondItem="gQe-vz-exy" secondAttribute="bottom" id="Owv-LH-eBD"/>
+                            <constraint firstItem="2Qf-eV-p6p" firstAttribute="leading" secondItem="5qm-63-Mrv" secondAttribute="leading" constant="40" id="Ter-jT-AFr"/>
+                            <constraint firstItem="iYt-ZI-PAa" firstAttribute="leading" secondItem="5qm-63-Mrv" secondAttribute="leading" constant="20" id="UAk-ma-6AE"/>
+                            <constraint firstItem="wWp-JC-rde" firstAttribute="leading" secondItem="5qm-63-Mrv" secondAttribute="leading" constant="40" id="WTd-ba-UoD" userLabel="Slider Bar.leading = Safe Area.leading + 30"/>
+                            <constraint firstItem="kYQ-AJ-k47" firstAttribute="centerX" secondItem="LDG-Yc-CVA" secondAttribute="centerX" id="X12-Lu-bBl"/>
+                            <constraint firstItem="2Qf-eV-p6p" firstAttribute="top" secondItem="iYt-ZI-PAa" secondAttribute="bottom" constant="60" id="eT2-ZU-eCq"/>
+                            <constraint firstItem="5qm-63-Mrv" firstAttribute="bottom" secondItem="kYQ-AJ-k47" secondAttribute="bottom" constant="60" id="fNO-M1-4Jd"/>
+                            <constraint firstItem="NrA-en-ZSO" firstAttribute="leading" secondItem="5qm-63-Mrv" secondAttribute="leading" constant="40" id="iq2-FB-4aG"/>
+                            <constraint firstItem="5qm-63-Mrv" firstAttribute="bottom" secondItem="d0l-gN-Sp6" secondAttribute="bottom" constant="60" id="rT3-Uw-dz8"/>
+                            <constraint firstItem="5qm-63-Mrv" firstAttribute="trailing" secondItem="2Qf-eV-p6p" secondAttribute="trailing" constant="40" id="z2d-XB-Fg7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SiQ-5m-P7k"/>
+                    <connections>
+                        <outlet property="backButton" destination="iYt-ZI-PAa" id="dbf-GE-CMp"/>
+                        <outlet property="durationLabel" destination="gQe-vz-exy" id="W6C-XT-sAw"/>
+                        <outlet property="pauseButton" destination="kYQ-AJ-k47" id="OAT-Eu-HlJ"/>
+                        <outlet property="playButton" destination="d0l-gN-Sp6" id="b4W-6n-zWu"/>
+                        <outlet property="restartButton" destination="NrA-en-ZSO" id="GW9-vi-Vyx"/>
+                        <outlet property="sliderBar" destination="wWp-JC-rde" id="Ih3-Wd-CzA"/>
+                        <outlet property="titleLabel" destination="2Qf-eV-p6p" id="vdz-VX-8FN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bj8-Hz-9MU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270.99236641221376" y="-625.35211267605632"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.trianglehead.counterclockwise" catalog="system" width="119" height="128"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="pause.circle" catalog="system" width="128" height="123"/>
+        <image name="play.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
